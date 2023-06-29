@@ -1,0 +1,35 @@
+.spacer {
+  flex: 1;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  /* flex: 0.1 0 1;
+      flex-direction: row;
+      justify-content: space-between; */
+}
+li {
+  margin-right: 1em;
+}
+
+.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.user {
+  margin-top: 2%;
+  margin-right: 5%;
+  display: flex;
+  justify-content: end;
+}
+
+@media screen and (max-width: 375px) {
+  .user {
+    margin-top: 5%;
+    margin-right: 8%;
+    display: flex;
+    justify-content: end;
+  }
+}

@@ -1,0 +1,19 @@
+<div class="container">
+    <main class="main">
+      <div class="card" *ngFor="let pokemon of likedPokemons">
+        <div class="pokemon">
+          <img src="{{pokemon.src}}" alt="Avatar" />
+        </div>
+        <div class="card-container">
+          <div class="card-title">
+            <b class="pokemon-number">{{pokemon.number}}</b> <b>  {{pokemon.name}}</b>
+          </div>
+          <div class="chips" *ngIf="pokemon.types">
+            <div class="chip" *ngFor="let type of pokemon.types"><b>{{type}}</b></div>
+          </div>
+        </div>
+        <div class="likes">
+          <img src="../../assets/Vector.png" />
+        </div>
+      </div>
+    </main>

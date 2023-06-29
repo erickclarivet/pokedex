@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="inputs">
+    <input type="text" class="search" placeholder="Search..." [(ngModel)]="searchFilter" >
+    <input type="text" class="number" placeholder="Number" [(ngModel)]="numberFilter"/>
+    <input type="text" class="type" placeholder="Type" [(ngModel)]="typeFilter" />
+  </div>
+  <main class="main">
+    <div class="card" *ngFor="let pokemon of pokemons | FilterPipe: searchFilter:numberFilter:typeFilter">
+      <div class="pokemon">
+        <img src="{{pokemon.src}}" alt="Avatar" />
+      </div>
+      <div class="card-container">
+        <div class="card-title">
+          <b class="pokemon-number">{{pokemon.number}}</b> <b>  {{pokemon.name}}</b>
+        </div>
+        <div class="chips" *ngIf="pokemon.types">
+          <div class="chip" *ngFor="let type of pokemon.types"><b>{{type}}</b></div>
+        </div>
+      </div>
+      <div class="likes">
+        <img (click)="onLikedClicked(pokemon)" src="../../assets/Vector.png" />
+      </div>
+    </div>
+  </main>
+</div>
