@@ -23,6 +23,8 @@ body {
 
 button:hover {
   border: 1px rgb(189, 189, 189) solid;
+  transform: translate3D(0, -1px, 0) scale(1.03);
+  transition: all 0.1s ease; /* zoom in */
   cursor: pointer;
 }
 button:active {
@@ -30,8 +32,11 @@ button:active {
   color: White;
 }
 
+button {
+  transition: all 0.1s ease; /* zoom in */
+}
+
 .button {
-  width: 10%;
   font-size: 14px;
   font-weight: 700;
   line-height: 16px;
@@ -39,13 +44,6 @@ button:active {
   border-color: white;
   letter-spacing: 0.345em;
   text-align: center;
-}
-
-.inputs {
-  margin-top: 4%;
-  display: flex;
-  justify-content: center;
-  gap: 2%;
 }
 
 .pokedex {
@@ -62,6 +60,13 @@ button:active {
   border-radius: 18px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   border: 1px solid white;
+}
+
+.inputs {
+  margin-top: 4%;
+  display: flex;
+  justify-content: center;
+  gap: 2%;
 }
 
 .search {
@@ -100,6 +105,11 @@ button:active {
   width: 80%;
 }
 
+.card:hover {
+  transform: translate3D(0, -1px, 0) scale(1.03);
+  transition: all 0.2s ease; /* zoom in */
+}
+
 .card {
   border-radius: 20px;
   height: 168px;
@@ -111,6 +121,7 @@ button:active {
   background-color: white;
   gap: 10px;
   width: 307px;
+  transition: all 0.2s ease; /* back to normal */
 }
 
 .likes {
@@ -162,4 +173,72 @@ button:active {
 
 .likes > img {
   width: 150%;
+}
+
+@media screen and (max-width: 375px) {
+  .button {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    background-color: white;
+    border-color: white;
+    letter-spacing: 0.345em;
+    text-align: center;
+  }
+
+  .pokedex {
+    width: 141px;
+    height: 34px;
+    border-radius: 18px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    border: 1px solid white;
+  }
+
+  .liked {
+    width: 141px;
+    height: 34px;
+    border-radius: 18px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    border: 1px solid white;
+  }
+
+  .inputs {
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+    min-height: 110px;
+    flex-wrap: wrap;
+  }
+
+  .search {
+    width: 307px;
+    height: 36px;
+    border-radius: 18px;
+    border: 1px solid white;
+    padding-left: 10px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .number {
+    width: 102px;
+    border-radius: 18px;
+    border: 1px solid white;
+    padding-left: 10px;
+    height: 36px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .type {
+    width: 186px;
+    height: 36px;
+    border-radius: 25px;
+    border: 1px solid white;
+    padding-left: 10px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .main {
+    margin-top: 7%;
+  }
 }
