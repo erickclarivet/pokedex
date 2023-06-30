@@ -11,9 +11,23 @@ import { FormsModule } from '@angular/forms';
 import { PokemonService } from './services/Pokemon.service';
 import { LikedPokemonService } from './services/LikedPokemon.service';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({
-  declarations: [AppComponent, PokedexComponent, HeaderComponent, LikedComponent, FilterPipe],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
+  declarations: [
+    AppComponent,
+    PokedexComponent,
+    HeaderComponent,
+    LikedComponent,
+    FilterPipe,
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+  ],
   providers: [PokemonService, LikedPokemonService],
   bootstrap: [AppComponent],
 })

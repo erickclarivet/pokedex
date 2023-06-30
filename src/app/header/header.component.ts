@@ -18,6 +18,7 @@ export class HeaderComponent implements OnInit {
   }
 
   login(): void {
+
     this.authService.login({ email: 'test@gmail.com', pwd: '123' });
   }
 

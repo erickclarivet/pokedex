@@ -16,10 +16,10 @@ export class FilterPipe implements PipeTransform {
         const isNameIn =
           pokemon.name.toLowerCase().indexOf(nameFilter.toLowerCase()) >= 0;
         const isNumberIn =
-          pokemon.number.toLowerCase().indexOf(numberFilter.toLowerCase()) >= 0;
+          pokemon.id.toLowerCase().indexOf(numberFilter.toLowerCase()) >= 0;
         const isTypeIn =
           typeFilter == '' ||
-          pokemon.types.filter(
+          pokemon.type.filter(
             (type: string) =>
               type.toLowerCase().indexOf(typeFilter.toLowerCase()) >= 0
           ).length > 0;

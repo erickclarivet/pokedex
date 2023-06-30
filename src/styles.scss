@@ -21,7 +21,7 @@ body {
 }
 
 .buttons {
-  margin-top: 5%;
+  margin-top: 2%;
   display: flex;
   justify-content: center;
   gap: 3%;
@@ -102,7 +102,7 @@ button {
 }
 
 .main {
-  margin-top: 2.5%;
+  margin-top: 2%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -127,6 +127,14 @@ button {
   gap: 10px;
   width: 307px;
   transition: all 0.2s ease; /* back to normal */
+}
+
+.pokemon > img {
+  display: block;
+  max-width:126px;
+  max-height:117px;
+  width: auto;
+  height: auto;
 }
 
 .likes {
@@ -156,7 +164,7 @@ button {
   text-align: center;
   padding: 2px 5px;
   border-radius: 18px;
-  background-color: #ffe175;
+
   color: white;
   font-size: 8px;
   width: 52px;

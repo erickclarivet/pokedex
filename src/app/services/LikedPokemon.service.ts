@@ -13,8 +13,8 @@ export class LikedPokemonService {
     const filtered = this.likedPokemons.filter((likedPokemon) => {
       return (
         likedPokemon.name === pokemon.name &&
-        likedPokemon.number === pokemon.number &&
-        likedPokemon.src === pokemon.src
+        likedPokemon.id === pokemon.id &&
+        likedPokemon.img === pokemon.img
       );
     });
 
