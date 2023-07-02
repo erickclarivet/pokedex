@@ -1,7 +1,6 @@
 <div class="user">
   <a
     *ngIf="!isLoggedIn"
-    (click)="login()"
     class="active"
     ariaCurrentWhenActive="page"
     >Login</a
@@ -18,5 +17,12 @@
   <div class="buttons">
     <button class="pokedex button" [routerLink]="['pokedex']">POKEDEX</button>
     <button class="liked button" [routerLink]="['liked']">LIKED</button>
+  </div>
+  <div class="login" *ngIf="!isLoggedIn">
+    <div class="form">
+      <input type="email" #email placeholder="Email"/>
+      <input type="password" #password placeholder="Password"/>
+      <button type="submit" (click)="login(email.value, password.value)">LOG IN</button>
+    </div>
   </div>
 </header>
