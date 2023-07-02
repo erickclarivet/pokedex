@@ -1,5 +1,3 @@
-
-
 body {
   background-color: #f9f9f9;
   height: 100vh;
@@ -192,8 +190,27 @@ button {
   color: #9e9e9e;
 }
 
-.likes > img {
+button > img {
   width: 150%;
+  margin: 1px 0 2px 0;
+}
+
+.likes > button {
+  border-radius: 50px;
+  background-color: white;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.likes > button:hover {
+  border: 1px rgb(189, 189, 189) solid;
+}
+
+.likes > button:active {
+  background-color: rgb(189, 189, 189);
+  color: White;
 }
 
 .login {
@@ -241,7 +258,6 @@ button {
 
 .form > button:active {
   background-color: rgb(189, 189, 189);
-
 }
 
 @media screen and (max-width: 376px) {
