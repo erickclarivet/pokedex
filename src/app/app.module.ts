@@ -14,13 +14,13 @@ import { LikedPokemonService } from './services/LikedPokemon.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
     PokedexComponent,
     HeaderComponent,
     LikedComponent,
-    FilterPipe,
-  ],
+    FilterPipe
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,

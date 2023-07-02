@@ -1,16 +1,7 @@
-.spacer {
-  flex: 1;
-}
-
-ul {
-  list-style-type: none;
+.modal-butttons {
   display: flex;
-  /* flex: 0.1 0 1;
-      flex-direction: row;
-      justify-content: space-between; */
-}
-li {
-  margin-right: 1em;
+  justify-content: center;
+  gap: 10px;
 }
 
 .active {

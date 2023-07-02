@@ -8,8 +8,8 @@ import { AuthService } from '../services/auth.service';
 })
 export class HeaderComponent implements OnInit {
   isLoggedIn = false;
-  password : string = "";
-  email : string = "";
+  password: string = '';
+  email: string = '';
 
   constructor(private authService: AuthService) {}
 
@@ -19,7 +19,7 @@ export class HeaderComponent implements OnInit {
     );
   }
 
-  login(email : string, password: string): void {
+  login(email: string, password: string): void {
     this.authService.login({ email: email, pwd: password });
   }
 

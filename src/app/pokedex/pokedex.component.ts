@@ -36,7 +36,6 @@ export class PokedexComponent implements OnInit, OnDestroy {
   }
 
   getTypeColor(type: string): string {
-    debugger;
     switch (type.toUpperCase()) {
       case 'NORMAL':
         return '#CACACA';

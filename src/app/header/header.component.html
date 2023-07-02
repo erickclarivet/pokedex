@@ -1,16 +1,17 @@
 <div class="user">
   <a
-    *ngIf="!isLoggedIn"
+  *ngIf="!isLoggedIn"
     class="active"
+    onclick="document.getElementsByClassName('login')[0].style.display='flex'"
     ariaCurrentWhenActive="page"
-    >Login</a
+    >LOG IN</a
   >
   <a
     *ngIf="isLoggedIn"
     (click)="logout()"
     class="active"
     ariaCurrentWhenActive="page"
-    >Logout</a
+    >LOG OUT</a
   >
 </div>
 <header class="header">
@@ -20,9 +21,18 @@
   </div>
   <div class="login" *ngIf="!isLoggedIn">
     <div class="form">
-      <input type="email" #email placeholder="Email"/>
-      <input type="password" #password placeholder="Password"/>
-      <button type="submit" (click)="login(email.value, password.value)">LOG IN</button>
+      <input type="email" #email placeholder="Email" />
+      <input type="password" #password placeholder="Password" />
+      <div class="modal-butttons">
+      <button
+        type="submit"
+        (click)="login(email.value, password.value)"
+        onclick="document.getElementsByClassName('login')[0].style.display='none'"
+      >
+        LOG IN
+      </button>
+      <button onclick="document.getElementsByClassName('login')[0].style.display='none'">CANCEL</button>
+    </div>
     </div>
   </div>
 </header>
